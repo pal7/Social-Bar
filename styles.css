@@ -1,0 +1,120 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-facebook: #3b5998;
+  --color-twitter: #3cf;
+  --color-gmail: #dc4a38;
+  --color-dribble: #f26798;
+  --color-skype: #00aff0;
+}
+
+body {
+  background: #76a6b3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socialBar {
+  list-style: none;
+  display: flex;
+}
+
+.socialBar a {
+  width: 71px;
+  height: 75px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #222;
+  text-decoration: none;
+  box-shadow: 9px 8px 7px -1px rgba(34, 34, 46, 0.75);
+  -webkit-box-shadow: 9px 8px 7px -1px rgba(34, 34, 46, 0.75);
+  -moz-box-shadow: 9px 8px 7px -1px rgba(34, 34, 46, 0.75);
+  background: #ffe;
+  border-radius: 10px;
+  font-size: 27px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+
+.socialBar a i {
+  z-index: 1;
+}
+
+.socialBar a:hover {
+  font-size: 33px;
+  box-shadow: 4px 4px 2px -1px rgba(101, 101, 139, 0.75);
+  -webkit-box-shadow: 4px 4px 2px -1px rgba(101, 101, 139, 0.75);
+  -moz-box-shadow: 4px 4px 2px -1px rgba(101, 101, 139, 0.75);
+}
+
+/* resize width issue - white lines */
+
+.socialBar li:nth-of-type(1) a {
+  color: var(--color-facebook);
+}
+
+.socialBar li:nth-of-type(2) a {
+  color: var(--color-twitter);
+}
+
+.socialBar li:nth-of-type(3) a {
+  color: var(--color-gmail);
+}
+
+.socialBar li:nth-of-type(4) a {
+  color: var(--color-dribble);
+}
+
+.socialBar li:nth-of-type(5) a {
+  color: var(--color-skype);
+}
+
+.socialBar li a:hover {
+  color: #ffe;
+}
+
+.socialBar li:nth-of-type(1) a::before {
+  background: var(--color-facebook);
+}
+
+.socialBar li:nth-of-type(2) a::before {
+  background: var(--color-twitter);
+}
+
+.socialBar li:nth-of-type(3) a::before {
+  background: var(--color-gmail);
+}
+
+.socialBar li:nth-of-type(4) a::before {
+  background: var(--color-dribble);
+}
+
+.socialBar li:nth-of-type(5) a::before {
+  background: var(--color-skype);
+}
+
+.socialBar li a::before {
+  content: "";
+  height: 50%;
+  width: 50%;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  transform: translate(-80%, 80%) rotate(-45deg);
+  transition: all 0.35s cubic-bezier(0.5, 0.13, 0.52, 1.5);
+}
+
+.socialBar a:hover::before {
+  transform: scale(4.5) rotate(-45deg);
+}
